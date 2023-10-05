@@ -7,6 +7,17 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <PropertyGroup>
+        <OutputType>Exe</OutputType> 
+        <TargetFramework>net6.0</TargetFramework>
+        <PackageId>eUni_Core_NetCore</PackageId>
+        <Version>0.0.1</Version>
+        <Authors>Canh Huy</Authors>
+        <Company>HitGroup</Company>
+        <PackageDescription>This package eUni core base for api</PackageDescription>
+        <RepositoryUrl>https://github.com/ZM-soft/eUni-Core-NetCore</RepositoryUrl>
+    </PropertyGroup>
+
     <ItemGroup>
       <ProjectReference Include="..\eUni-Core-NetCore.Logging\eUni-Core-NetCore.Logging.csproj" />
       <ProjectReference Include="..\eUni-Core-NetCore.Shared\eUni-Core-NetCore.Shared.csproj" />

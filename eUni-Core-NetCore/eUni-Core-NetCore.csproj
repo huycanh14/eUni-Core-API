@@ -5,13 +5,15 @@
         <RootNamespace>eUni_Core_NetCore</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <!-- <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance> -->
     </PropertyGroup>
 
     <PropertyGroup>
         <OutputType>Exe</OutputType> 
         <TargetFramework>net6.0</TargetFramework>
         <PackageId>eUni_Core_NetCore</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.11</Version>
         <Authors>Canh Huy</Authors>
         <Company>HitGroup</Company>
         <PackageDescription>This package eUni core base for api</PackageDescription>
@@ -19,8 +21,39 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\eUni-Core-NetCore.Logging\eUni-Core-NetCore.Logging.csproj" />
-      <ProjectReference Include="..\eUni-Core-NetCore.Shared\eUni-Core-NetCore.Shared.csproj" />
+      <ProjectReference Include="..\eUni-Core-NetCore.Logging\eUni-Core-NetCore.Logging.csproj" PrivateAssets="all" />
+      <ProjectReference Include="..\eUni-Core-NetCore.Shared\eUni-Core-NetCore.Shared.csproj" PrivateAssets="all" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Serilog.AspNetCore" Version="7.0.0" />
+      <PackageReference Include="Serilog.Enrichers.Environment" Version="2.3.0" />
+      <PackageReference Include="Serilog.Extensions.Logging.File" Version="3.0.0" />
+      <PackageReference Include="Serilog.Sinks.Elasticsearch" Version="9.0.3" />
     </ItemGroup>
+    
+    <!-- <PropertyGroup>
+        <TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    </PropertyGroup>
+    <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+        <ItemGroup>
+            <BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+        </ItemGroup>
+    </Target> -->
+
+
+    
+
+    <PropertyGroup>
+      <TargetsForTfmSpecificBuildOutput> $(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+    </PropertyGroup>
+
+    <Target Name="CopyProjectReferencesToPackage" DependsOnTargets="BuildOnlySettings;ResolveReferences">
+      <ItemGroup>
+      <_ReferenceCopyLocalPaths Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference')-&gt;WithMetadataValue('PrivateAssets', 'All'))" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <BuildOutputInPackage Include="@(_ReferenceCopyLocalPaths)" TargetPath="%(_ReferenceCopyLocalPaths.DestinationSubDirectory)" />
+      </ItemGroup>
+    </Target>
 
 </Project>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eUni-Core-NetCore", "eUni-Core-NetCore\eUni-Core-NetCore.csproj", "{959021B1-8DF3-476D-9D37-46CF1E2E18D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eUni-Core-NetCore.Logging", "eUni-Core-NetCore.Logging\eUni-Core-NetCore.Logging.csproj", "{A54F53AE-768C-4529-9A56-6D83C1F2830C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eUni-Core-NetCore.Shared", "eUni-Core-NetCore.Shared\eUni-Core-NetCore.Shared.csproj", "{CFB809E3-361A-4998-A274-33C7EF3F5D72}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{959021B1-8DF3-476D-9D37-46CF1E2E18D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{959021B1-8DF3-476D-9D37-46CF1E2E18D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{959021B1-8DF3-476D-9D37-46CF1E2E18D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{959021B1-8DF3-476D-9D37-46CF1E2E18D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A54F53AE-768C-4529-9A56-6D83C1F2830C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A54F53AE-768C-4529-9A56-6D83C1F2830C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A54F53AE-768C-4529-9A56-6D83C1F2830C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A54F53AE-768C-4529-9A56-6D83C1F2830C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB809E3-361A-4998-A274-33C7EF3F5D72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB809E3-361A-4998-A274-33C7EF3F5D72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB809E3-361A-4998-A274-33C7EF3F5D72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB809E3-361A-4998-A274-33C7EF3F5D72}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

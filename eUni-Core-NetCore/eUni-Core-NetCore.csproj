@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <RootNamespace>eUni_Core_NetCore</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\eUni-Core-NetCore.Logging\eUni-Core-NetCore.Logging.csproj" />
+      <ProjectReference Include="..\eUni-Core-NetCore.Shared\eUni-Core-NetCore.Shared.csproj" />
+    </ItemGroup>
+
+</Project>
